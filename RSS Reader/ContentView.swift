@@ -1,59 +1,60 @@
-//
-//  ContentView.swift
-//  RSS Reader
-//
-//  Created by Nathaniel Cole on 8/9/24.
-//
-
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @EnvironmentObject var rssFeedManager: RSSFeedManager
+    @State private var feedURL: String = ""
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-            .toolbar {
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
+        NavigationView {
+            SidebarView(feedURL: $feedURL, addFeedAction: addFeed)
+            FeedListView()
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+    
+    private func addFeed() {
+        if let url = URL(string: feedURL) {
+            rssFeedManager.loadFeed(from: url)
+            feedURL = "" // Clear the input field after adding
         }
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+struct SidebarView: View {
+    @Binding var feedURL: String
+    var addFeedAction: () -> Void
+
+    var body: some View {
+        VStack {
+            TextField("Enter RSS Feed URL", text: $feedURL)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            Button(action: addFeedAction) {
+                Image(systemName: "plus.circle.fill")
+                    .font(.title)
+                    .padding()
+            }
+            .padding()
+            
+            Spacer()
+        }
+        .frame(maxWidth: 300)
+        .background(Color(NSColor.windowBackgroundColor)) // Use Color for background
+    }
+}
+
+struct FeedListView: View {
+    @EnvironmentObject var rssFeedManager: RSSFeedManager
+
+    var body: some View {
+        List(rssFeedManager.feedItems) { item in
+            VStack(alignment: .leading) {
+                Text(item.title)
+                    .font(.headline)
+                Text(item.description)
+                    .font(.subheadline)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
 }

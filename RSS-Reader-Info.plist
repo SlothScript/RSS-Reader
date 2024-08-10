@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>RSSReader</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.example.RSSReader</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>rss</string>
+			</array>
+		</dict>
+	</array>
+    <key>UTExportedTypeDeclarations</key>
+    <array>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>com.example.rssfeed</string>
+            <key>UTTypeTagSpecification</key>
+            <dict>
+                <key>public.mime-type</key>
+                <string>application/rss+xml</string>
+                <key>public.filename-extension</key>
+                <string>rss</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

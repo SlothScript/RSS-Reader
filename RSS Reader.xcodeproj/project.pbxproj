@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD1DB24A2C66C5C0004BF261 /* RSS_ReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB2492C66C5C0004BF261 /* RSS_ReaderApp.swift */; };
 		DD1DB24C2C66C5C0004BF261 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB24B2C66C5C0004BF261 /* ContentView.swift */; };
-		DD1DB24E2C66C5C0004BF261 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB24D2C66C5C0004BF261 /* Item.swift */; };
 		DD1DB2502C66C5C2004BF261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1DB24F2C66C5C2004BF261 /* Assets.xcassets */; };
 		DD1DB2532C66C5C2004BF261 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1DB2522C66C5C2004BF261 /* Preview Assets.xcassets */; };
 		DD1DB25E2C66C5C2004BF261 /* RSS_ReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB25D2C66C5C2004BF261 /* RSS_ReaderTests.swift */; };
 		DD1DB2682C66C5C2004BF261 /* RSS_ReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB2672C66C5C2004BF261 /* RSS_ReaderUITests.swift */; };
 		DD1DB26A2C66C5C2004BF261 /* RSS_ReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB2692C66C5C2004BF261 /* RSS_ReaderUITestsLaunchTests.swift */; };
+		DD1DB27A2C66DD8F004BF261 /* RSSReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB2792C66DD8F004BF261 /* RSSReaderApp.swift */; };
+		DD1DB27C2C66DDFC004BF261 /* RSSFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB27B2C66DDFC004BF261 /* RSSFeedManager.swift */; };
+		DD1DB27E2C66DE09004BF261 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB27D2C66DE09004BF261 /* FeedItem.swift */; };
+		DD1DB2802C66DE14004BF261 /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB27F2C66DE14004BF261 /* RSSParser.swift */; };
+		DD1DB2822C66DEB5004BF261 /* AppDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DB2812C66DEB5004BF261 /* AppDelagate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +39,7 @@
 
 /* Begin PBXFileReference section */
 		DD1DB2462C66C5C0004BF261 /* RSS Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD1DB2492C66C5C0004BF261 /* RSS_ReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSS_ReaderApp.swift; sourceTree = "<group>"; };
 		DD1DB24B2C66C5C0004BF261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		DD1DB24D2C66C5C0004BF261 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DD1DB24F2C66C5C2004BF261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD1DB2522C66C5C2004BF261 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DD1DB2542C66C5C2004BF261 /* RSS_Reader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RSS_Reader.entitlements; sourceTree = "<group>"; };
@@ -47,6 +48,12 @@
 		DD1DB2632C66C5C2004BF261 /* RSS ReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RSS ReaderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1DB2672C66C5C2004BF261 /* RSS_ReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSS_ReaderUITests.swift; sourceTree = "<group>"; };
 		DD1DB2692C66C5C2004BF261 /* RSS_ReaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSS_ReaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DD1DB2782C66DCD9004BF261 /* RSS-Reader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RSS-Reader-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DD1DB2792C66DD8F004BF261 /* RSSReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderApp.swift; sourceTree = "<group>"; };
+		DD1DB27B2C66DDFC004BF261 /* RSSFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedManager.swift; sourceTree = "<group>"; };
+		DD1DB27D2C66DE09004BF261 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		DD1DB27F2C66DE14004BF261 /* RSSParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
+		DD1DB2812C66DEB5004BF261 /* AppDelagate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelagate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +104,16 @@
 		DD1DB2482C66C5C0004BF261 /* RSS Reader */ = {
 			isa = PBXGroup;
 			children = (
-				DD1DB2492C66C5C0004BF261 /* RSS_ReaderApp.swift */,
+				DD1DB2782C66DCD9004BF261 /* RSS-Reader-Info.plist */,
 				DD1DB24B2C66C5C0004BF261 /* ContentView.swift */,
-				DD1DB24D2C66C5C0004BF261 /* Item.swift */,
+				DD1DB27B2C66DDFC004BF261 /* RSSFeedManager.swift */,
+				DD1DB27D2C66DE09004BF261 /* FeedItem.swift */,
+				DD1DB27F2C66DE14004BF261 /* RSSParser.swift */,
 				DD1DB24F2C66C5C2004BF261 /* Assets.xcassets */,
 				DD1DB2542C66C5C2004BF261 /* RSS_Reader.entitlements */,
 				DD1DB2512C66C5C2004BF261 /* Preview Content */,
+				DD1DB2792C66DD8F004BF261 /* RSSReaderApp.swift */,
+				DD1DB2812C66DEB5004BF261 /* AppDelagate.swift */,
 			);
 			path = "RSS Reader";
 			sourceTree = "<group>";
@@ -262,9 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1DB27E2C66DE09004BF261 /* FeedItem.swift in Sources */,
+				DD1DB27C2C66DDFC004BF261 /* RSSFeedManager.swift in Sources */,
+				DD1DB27A2C66DD8F004BF261 /* RSSReaderApp.swift in Sources */,
 				DD1DB24C2C66C5C0004BF261 /* ContentView.swift in Sources */,
-				DD1DB24E2C66C5C0004BF261 /* Item.swift in Sources */,
-				DD1DB24A2C66C5C0004BF261 /* RSS_ReaderApp.swift in Sources */,
+				DD1DB2822C66DEB5004BF261 /* AppDelagate.swift in Sources */,
+				DD1DB2802C66DE14004BF261 /* RSSParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,13 +439,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "RSS Reader/RSS_Reader.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RSS Reader/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RSS-Reader-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -440,8 +458,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Slothscript.RSS-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -451,13 +473,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "RSS Reader/RSS_Reader.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RSS Reader/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RSS-Reader-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -466,8 +492,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Slothscript.RSS-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};
